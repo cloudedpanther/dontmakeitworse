@@ -8,9 +8,14 @@
     <title>Don't Make It Worse</title>
   </head>
   <body>
-    <div class="login-form">
-      <input type="text" />
-      <button>Log In</button>
+    <form class="login-form">
+      <input
+        required
+        maxlength="15"
+        placeholder="Please Write Your Name..."
+        type="text"
+      />
+      <input type="submit" value="Log In" />
     </form>
     <script src="app.js"></script>
   </body>
