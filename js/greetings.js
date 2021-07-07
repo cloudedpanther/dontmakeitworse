@@ -21,9 +21,13 @@ function handleLoginSubmit(event) {
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
-if(savedUserName === null) {
-    loginForm.classList.remove(HIDDEN);
-    loginForm.addEventListener("submit", handleLoginSubmit);
-} else {
-    paintGreetings(savedUserName);
+function init() {
+    if(savedUserName === null) {
+        loginForm.classList.remove(HIDDEN);
+        loginForm.addEventListener("submit", handleLoginSubmit);
+    } else {
+        paintGreetings(savedUserName);
+    }
 }
+
+init();
