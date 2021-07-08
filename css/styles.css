@@ -1,3 +1,7 @@
 .hidden {
   display: none;
 }
+.background-image {
+  width: 720px;
+  height: auto;
+}
