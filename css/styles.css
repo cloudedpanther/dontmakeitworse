@@ -28,18 +28,19 @@ body {
 header {
   height: 50%;
   display: flex;
-  justify-content: center;
+  padding: 0px 30%;
   align-items: flex-end;
-}
-.clock-container {
   position: relative;
 }
+/* .clock-container {
+  position: relative;
+} */
 .clock {
   font-size: 1000%;
 }
 .flag {
   position: absolute;
-  right: -10%;
+  right: 26.5%;
   bottom: 2%;
   font-size: 200%;
 }
