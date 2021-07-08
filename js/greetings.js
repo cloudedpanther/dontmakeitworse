@@ -2,6 +2,7 @@ const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
 const container = document.querySelector(".todo-container");
 const greeting = document.querySelector(".greeting");
+const footer = document.querySelector("footer");
 
 const HIDDEN = "hidden";
 const USERNAME_KEY = "userName";
@@ -9,6 +10,7 @@ const USERNAME_KEY = "userName";
 function paintGreetings(userName) {
     greeting.innerText = `Greetings, ${userName}!`;
     container.classList.remove(HIDDEN);
+    footer.classList.remove(HIDDEN);
 }
 
 function handleLoginSubmit(event) {
