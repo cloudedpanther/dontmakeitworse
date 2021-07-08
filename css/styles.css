@@ -1,8 +1,9 @@
 @import "reset.css";
 
-.hidden {
-  display: none;
+* {
+  box-sizing: border-box;
 }
+
 .background-image {
   width: 100%;
   height: 100%;
@@ -15,7 +16,13 @@ body {
   width: 100vw;
   height: 100vh;
   color: white;
-  background-color: slateblue;
+  background-color: #b4b5c0;
+  font-family: "Roboto Slab", serif;
+}
+.clock-container,
+.greeting,
+.quote {
+  user-select: none;
 }
 
 header {
@@ -37,8 +44,148 @@ header {
   font-size: 200%;
 }
 
-footer {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1.5%;
+}
+input {
+  border: none;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  padding-bottom: 1%;
+}
+input::placeholder {
+  color: #b4b5c0;
+}
+input:focus {
+  outline: none;
+}
+.login-form input {
+  font-size: 300%;
+}
+
+.greeting {
+  font-size: 300%;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.todo-form {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.todo-form input {
+  font-size: 150%;
+  width: 50%;
+}
+
+.todo-list {
+  padding-top: 3%;
+  width: 45%;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.todo-list button {
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border-radius: 50%;
+  border: none;
+  background-color: #dcdde1;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 1);
+}
+.todo-list button:hover {
+  cursor: pointer;
+}
+.todo-list button:active {
+  background-color: #636e72;
+}
+.todo-list span {
+  padding-bottom: 3px;
+  font-size: 120%;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  width: 100vw;
+  position: absolute;
+  bottom: 2%;
+  padding-left: 1%;
+}
+.quote {
+  font-size: 100%;
+}
+
+.sticky-note-button {
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
+  background-color: #fafafa;
+  color: #353b48;
+  font-size: 80%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 1);
+}
+.sticky-note-button:hover {
+  cursor: pointer;
+}
+.sticky-note {
+  background-color: #fafafa;
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 1);
+}
+.note-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 25px;
+  color: #8395a7;
+}
+.note-header .fa-times:hover {
+  cursor: pointer;
+}
+.sticky-note textarea {
+  resize: none;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 10px;
+}
+.sticky-note textarea:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
 }

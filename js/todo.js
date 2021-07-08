@@ -32,23 +32,28 @@ function paintToDo(todo) {
     const btn = document.createElement('button');
     btn.addEventListener('click', deleteToDo);
     const i = document.createElement('i');
-    i.classList.add('fas', 'fa-trash-alt');
+    i.classList.add('fas', 'fa-check');
     btn.appendChild(i);
-    li.appendChild(span);
     li.appendChild(btn);
+    li.appendChild(span);
     toDoList.appendChild(li);
 }
 
 function handleToDoSubmit(event) {
     event.preventDefault();
-    const newToDo = {
-        id: Date.now(),
-        text: toDoInput.value
-    };
-    toDoInput.value = "";
-    toDos.push(newToDo);
-    saveToDo();
-    paintToDo(newToDo);
+    if(toDos.length >= 5) {
+        alert("Try to focus on five or less things.");
+        toDoInput.value = "";
+    } else {
+        const newToDo = {
+            id: Date.now(),
+            text: toDoInput.value
+        };
+        toDoInput.value = "";
+        toDos.push(newToDo);
+        saveToDo();
+        paintToDo(newToDo);
+    }
 }
 
 function init() {

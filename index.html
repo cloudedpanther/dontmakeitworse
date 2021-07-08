@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Don't Make It Worse</title>
   </head>
@@ -23,17 +29,17 @@
           placeholder="What is your name?"
           type="text"
         />
-        <input type="submit" value="Log In" />
       </form>
 
       <div class="todo-container hidden">
         <h1 class="greeting"></h1>
+
         <form class="todo-form">
           <input
             type="text"
             placeholder="Write a To Do and press Enter..."
             required
-            maxlength="50"
+            maxlength="30"
           />
         </form>
         <ul class="todo-list"></ul>
@@ -42,6 +48,15 @@
 
     <footer>
       <h3 class="quote"></h3>
+      <div class="sticky-note-button">
+        <i class="fa-3x fas fa-sticky-note"></i>
+      </div>
+      <div class="sticky-note hidden">
+        <div class="note-header">
+          <span class="note-close-button"><i class="fas fa-times"></i></span>
+        </div>
+        <textarea cols="50" rows="10"></textarea>
+      </div>
     </footer>
 
     <!-- javacript sources -->
@@ -50,6 +65,7 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/stickyNote.js"></script>
 
     <!-- Imojis -->
     <script

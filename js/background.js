@@ -1,7 +1,7 @@
 const images = [];
 
-for(let i = 0; i <= 9; i++) {
-    images.push(`${i}.jpg`);
+for(let i = 0; i <= 10; i++) {
+    images.push(`${String(i).padStart(3, 0)}.jpg`);
 }
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
