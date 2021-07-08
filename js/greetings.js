@@ -1,6 +1,6 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
-const main = document.querySelector("main");
+const main = document.querySelector("todo-container");
 const greeting = document.querySelector(".greeting");
 
 const HIDDEN = "hidden";

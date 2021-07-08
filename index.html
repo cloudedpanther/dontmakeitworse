@@ -8,30 +8,41 @@
     <title>Don't Make It Worse</title>
   </head>
   <body>
-    <form class="login-form hidden">
-      <input
-        required
-        maxlength="15"
-        placeholder="What is your name?"
-        type="text"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <main class="hidden">
-      <h1 class="greeting"></h1>
-      <form class="todo-form">
+    <header>
+      <div class="clock-container">
+        <h2 class="clock">00:00:00</h2>
+        <h3 class="flag"></h3>
+      </div>
+    </header>
+
+    <main>
+      <form class="login-form hidden">
         <input
-          type="text"
-          placeholder="Write a To Do and press Enter..."
           required
-          maxlength="50"
+          maxlength="15"
+          placeholder="What is your name?"
+          type="text"
         />
+        <input type="submit" value="Log In" />
       </form>
-      <ul class="todo-list"></ul>
+
+      <div class="todo-container hidden">
+        <h1 class="greeting"></h1>
+        <form class="todo-form">
+          <input
+            type="text"
+            placeholder="Write a To Do and press Enter..."
+            required
+            maxlength="50"
+          />
+        </form>
+        <ul class="todo-list"></ul>
+      </div>
     </main>
 
-    <h2 class="clock">00:00</h2>
-    <h3 class="quote"></h3>
+    <footer>
+      <h3 class="quote"></h3>
+    </footer>
 
     <!-- javacript sources -->
     <script src="js/greetings.js"></script>
@@ -39,5 +50,13 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+
+    <!-- Imojis -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

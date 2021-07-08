@@ -1,6 +1,6 @@
 const images = [];
 
-for(let i = 0; i <= 14; i++) {
+for(let i = 0; i <= 9; i++) {
     images.push(`${i}.jpg`);
 }
 
@@ -10,7 +10,6 @@ function init() {
     const bgImage = document.createElement('img');
     bgImage.src = `img/${chosenImage}`;
     bgImage.classList.add('background-image');
-    console.log(bgImage);
     document.body.appendChild(bgImage);
 }
 
