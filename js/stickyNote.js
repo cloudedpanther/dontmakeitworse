@@ -4,15 +4,24 @@ const noteCloseBtn = document.querySelector("footer .sticky-note .note-header .n
 const realNote = note.querySelector('textarea');
 
 const NOTES_KEY = 'notes';
+const BTN_APPEAR = 'magic-appear';
 
 function handleCloseBtnClick() {
     note.classList.add(HIDDEN);
-    noteOpenBtn.classList.remove(HIDDEN), 500;
+    noteOpenBtn.classList.remove(HIDDEN);
+    noteOpenBtn.classList.add(BTN_APPEAR);
+    setTimeout(() => {
+        noteOpenBtn.classList.remove(BTN_APPEAR);
+    }, 500);
 }
 
 function handleOpenBtnClick() {
     noteOpenBtn.classList.add(HIDDEN);
-    note.classList.remove(HIDDEN), 1000;
+    note.classList.remove(HIDDEN);
+    note.classList.add(BTN_APPEAR);
+    setTimeout(() => {
+        note.classList.remove(BTN_APPEAR);
+    }, 500);
 }
 
 function loadNotes() {
